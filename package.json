@@ -1,0 +1,14 @@
+{
+  "name": "naturelanding",
+  "version": "1.0.0",
+  "description": "landing-page",
+  "main": "index.js",
+  "scripts": {
+		"compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "author": "danbohdan",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.78.0"
+  }
+}

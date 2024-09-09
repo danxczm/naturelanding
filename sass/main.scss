@@ -1,8 +1,14 @@
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-text-gray: #777;
+$color-white: #fff;
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
+
   box-sizing: inherit;
 }
 
@@ -12,19 +18,27 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+
+  font-family: 'Lato', sans-serif;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
+  color: $color-text-gray;
   padding: 3rem;
 }
 
 .header {
   position: relative;
   height: 95dvh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
+
   clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
 }
 
@@ -43,11 +57,12 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   text-align: center;
 }
 
 .header__heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
   margin-bottom: 6rem;
 }
@@ -56,6 +71,7 @@ body {
   display: block;
   font-size: 6rem;
   letter-spacing: 3.5rem;
+
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -65,10 +81,12 @@ body {
   display: block;
   font-size: 2rem;
   letter-spacing: 1.7rem;
+
   animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-delay: 0.1s;
+
   animation-fill-mode: backwards;
 }
 
@@ -76,10 +94,12 @@ body {
 .header__btn:visited {
   display: inline-block;
   position: relative;
+
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
   border-radius: 3rem;
+
   transition: all 0.2s;
 }
 
@@ -94,12 +114,12 @@ body {
 }
 
 .btn--white {
-  background-color: #fff;
-  color: #777;
+  background-color: $color-white;
+  color: $color-text-gray;
 }
 
 .header__btn::after {
-  content: "";
+  content: '';
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -112,7 +132,7 @@ body {
 }
 
 .btn--white::after {
-  background-color: #fff;
+  background-color: $color-white;
 }
 
 .header__btn:hover::after {
@@ -139,6 +159,7 @@ body {
     transform: translate(0);
   }
 }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -152,17 +173,21 @@ body {
     transform: translate(0);
   }
 }
+
 @keyframes moveFromBottom {
   0% {
     opacity: 0;
     transform: translateY(3rem);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
   }
 }
+
 /* UTILS */
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -170,7 +195,5 @@ body {
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
-             supported by Chrome, Edge, Opera and Firefox */
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
-
-/*# sourceMappingURL=style.css.map */
