@@ -1,11 +1,13 @@
+@use '../utils/variables' as var;
+
 .header {
   position: relative;
   height: 95dvh;
 
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
+      rgba(var.$color-primary-light, 0.8),
+      rgba(var.$color-primary-dark, 0.8)
     ),
     url(../img/hero.jpg);
   background-size: cover;
@@ -34,7 +36,7 @@
 }
 
 .header__heading-primary {
-  color: $color-white;
+  color: var.$color-white;
   text-transform: uppercase;
   margin-bottom: 6rem;
 

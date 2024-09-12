@@ -1,3 +1,5 @@
+@use '../utils/variables' as var;
+
 *,
 *::after,
 *::before {
@@ -18,6 +20,6 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: $color-text-gray;
+  color: var.$color-text-gray;
   padding: 3rem;
 }

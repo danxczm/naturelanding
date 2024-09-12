@@ -1,3 +1,5 @@
+@use '../utils/variables' as var;
+
 .button {
   &:link,
   &:visited {
@@ -14,7 +16,7 @@
 
   &:hover {
     transform: translateY(-0.5rem);
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+    box-shadow: 0 1rem 2rem rgba(var.$color-black, 0.4);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -24,7 +26,7 @@
 
   &:active {
     transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(var.$color-black, 0.2);
   }
 
   &::after {
@@ -41,11 +43,11 @@
   }
 
   &--white {
-    background-color: $color-white;
-    color: $color-text-gray;
+    background-color: var.$color-white;
+    color: var.$color-text-gray;
 
     &::after {
-      background-color: $color-white;
+      background-color: var.$color-white;
     }
   }
 
