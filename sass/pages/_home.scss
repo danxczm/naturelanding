@@ -28,3 +28,17 @@
     text-shadow: 0.5rem 1rem 2rem rgba(var.$color-black, 0.2);
   }
 }
+
+.section-about__heading-tertiary {
+  font-size: var.$text-base;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-about__paragraph {
+  font-size: var.$text-base;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
