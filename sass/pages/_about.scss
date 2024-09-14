@@ -1,12 +1,12 @@
 @use '../utils/variables' as var;
 
-.section-about {
+.about {
   background-color: var.$color-gray-light-1;
   padding: 25rem 0;
   margin-top: -20vh;
 }
 
-.section-about__heading-secondary {
+.about__heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -29,13 +29,13 @@
   }
 }
 
-.section-about__heading-tertiary {
+.about__heading-tertiary {
   font-size: var.$text-base;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.section-about__paragraph {
+.about__paragraph {
   font-size: var.$text-base;
 
   &:not(:last-child) {

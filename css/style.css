@@ -126,7 +126,7 @@ body {
   animation-fill-mode: backwards;
 }
 
-.section-about__button:link, .section-about__button:visited {
+.about__button:link, .about__button:visited {
   color: #55c57a;
   display: inline-block;
   text-decoration: none;
@@ -135,15 +135,49 @@ body {
   transition: all 0.2s;
   border-radius: 10px;
 }
-.section-about__button:hover {
+.about__button:hover {
   color: #fff;
   background-color: #55c57a;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
-.section-about__button:active {
+.about__button:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0);
+}
+
+.about__composition {
+  position: relative;
+}
+.about__composition-photo {
+  width: 55%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  transition: all 0.2s;
+  outline-offset: 2rem;
+}
+.about__composition-photo--p1 {
+  left: 0;
+  top: -2rem;
+}
+.about__composition-photo--p2 {
+  right: 0;
+  top: 2rem;
+}
+.about__composition-photo--p3 {
+  left: 20%;
+  top: 10rem;
+}
+.about__composition-photo:hover {
+  outline: 1.5rem solid #55c57a;
+  transform: scale(1.05) translateY(-0.5rem);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+.about__composition:hover .about__composition-photo:not(:hover) {
+  transform: scale(0.95);
 }
 
 .header {
@@ -222,13 +256,13 @@ body {
   margin-right: 6rem;
 }
 
-.section-about {
+.about {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh;
 }
 
-.section-about__heading-secondary {
+.about__heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -240,21 +274,21 @@ body {
   color: transparent;
   transition: all 0.2s;
 }
-.section-about__heading-secondary:hover {
+.about__heading-secondary:hover {
   transform: translateY(-0.5rem) scale(1.05);
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.section-about__heading-tertiary {
+.about__heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.section-about__paragraph {
+.about__paragraph {
   font-size: 1.6rem;
 }
-.section-about__paragraph:not(:last-child) {
+.about__paragraph:not(:last-child) {
   margin-bottom: 3rem;
 }
 
