@@ -1,0 +1,29 @@
+@use '../utils/variables' as var;
+@use '../utils/mixins' as mx;
+
+.row {
+  max-width: var.$grid-width;
+  margin: 0 auto;
+
+  @include mx.clearfix;
+
+  &:not(:last-child) {
+    margin-right: var.$gutter-vertical;
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{var.$gutter-horizontal}) / 2);
+
+    &:not(:last-child) {
+      margin-right: var.$gutter-horizontal;
+    }
+  }
+
+  & [class^='col-'] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: var.$gutter-horizontal;
+    }
+  }
+}
