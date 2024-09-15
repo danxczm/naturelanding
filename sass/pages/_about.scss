@@ -1,4 +1,5 @@
 @use '../utils/variables' as var;
+@use '../utils/placeholders' as *;
 
 .about {
   background-color: var.$color-gray-light-1;
@@ -30,9 +31,7 @@
 }
 
 .about__heading-tertiary {
-  font-size: var.$text-base;
-  font-weight: 700;
-  text-transform: uppercase;
+  @extend %heading-default;
 }
 
 .about__paragraph {

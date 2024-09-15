@@ -19,6 +19,14 @@
     }
   }
 
+  .col-1-of-4 {
+    width: calc((100% - #{3 * var.$gutter-horizontal}) / 4);
+
+    &:not(:last-child) {
+      margin-right: var.$gutter-horizontal;
+    }
+  }
+
   & [class^='col-'] {
     float: left;
 

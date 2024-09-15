@@ -1,0 +1,7 @@
+@use '../utils/variables' as var;
+
+%heading-default {
+  font-size: var.$text-base;
+  font-weight: 700;
+  text-transform: uppercase;
+}
